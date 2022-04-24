@@ -43,11 +43,11 @@ const schoolPrompt = {
 const moreMembersPrompt = {
     type: 'list',
     message: 'Would you like to add an engineer, an intern, or finish building your team?',
-    name: 'addSelection',
+    name: 'userSelection',
     choices: [
         'Engineer',
         'Intern',
-        'Finished building my team.'
+        'Finish',
     ]
 }
 
@@ -56,4 +56,6 @@ const managerPrompt = employeePrompt.concat(officeNumberPrompt);
 const engineerPrompt = employeePrompt.concat(githubPrompt);
 const internPrompt = employeePrompt.concat(schoolPrompt);
 
-module.exports = [managerPrompt, engineerPrompt, internPrompt, moreMembersPrompt];
+const welcomeMessage = "Welcome to the Team Profile Generator. Input information about your team to generate an HTML page displaying their information. You can add as many engineers and interns as you need later, but first let's start with your Team Manager.";
+
+module.exports = [managerPrompt, engineerPrompt, internPrompt, moreMembersPrompt, welcomeMessage];

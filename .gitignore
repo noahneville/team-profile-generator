@@ -1,4 +1,6 @@
 x-pseudocode.md
 x-instructions.md
 node_modules/
-test.html
+.gitignore
+trash.js
+getEmployees.js
